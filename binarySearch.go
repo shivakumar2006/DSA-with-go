@@ -1,19 +1,15 @@
 package main
 
-import (
-	"fmt"
-	"sort"
-)
+import "fmt"
 
 func main() {
-	array := []int{18, 69, 70, 58, 42, 35, 110, 99}
+	array := []int{18, 32, 44, 58, 69, 72, 99, 110}
 	fmt.Println(binarySearch(array, 69))
 }
 
 func binarySearch(array []int, x int) int {
 	l := 0
 	r := len(array) - 1
-	sort.Ints(array)
 	for l <= r {
 		mid := (l + r) / 2
 		if array[mid] == x {
