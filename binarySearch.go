@@ -22,3 +22,6 @@ func binarySearch(array []int, x int) int {
 	}
 	return -1
 }
+
+// when we need to sort the given array first
+// then we add sort in code with th line sort.Ints(array)
