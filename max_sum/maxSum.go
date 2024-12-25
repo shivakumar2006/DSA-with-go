@@ -28,8 +28,8 @@ func maximumCard(array []int) int {
 
 func sum(n int) int {
 	target := 0
-	if n > 0 {
-		target = n % 10
+	for n > 0 {
+		target += n % 10
 		n = n / 10
 	}
 	return target
