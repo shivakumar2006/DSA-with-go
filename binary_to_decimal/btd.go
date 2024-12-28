@@ -29,3 +29,19 @@ func main() {
 // 	}
 // 	fmt.Println(decimalValue)
 // }
+
+// package main
+
+// import (
+// 	"fmt"
+// 	"strconv"
+// )
+
+// func main() {
+// 	binaryString := "11010100110"
+// 	decimalValue, err := strconv.ParseInt(binaryString, 2, 0)
+// 	if err != nil {
+// 		fmt.Println("Error : ", err)
+// 	}
+// 	fmt.Println(decimalValue)
+// }
