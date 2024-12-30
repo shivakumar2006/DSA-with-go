@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	binaryString := "0101"
+	binaryString := "111001000101111"
 	decimalValue, err := strconv.ParseInt(binaryString, 2, 0)
 	if err != nil {
 		fmt.Println("Error : ", err)
