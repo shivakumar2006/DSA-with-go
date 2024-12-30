@@ -61,6 +61,7 @@ func main() {
 
 func canConstruct(ransomeNote string, magazine string) bool {
 	charSet := [26]int{}
+
 	for i := 0; i < len(magazine); i++ {
 		charSet[magazine[i]-'a']++
 	}
