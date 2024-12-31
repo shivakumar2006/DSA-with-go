@@ -49,6 +49,31 @@
 // Update hashMap: {0: 1, 1: 1, 2: 1, 3: 1}
 // Final Output: 2.
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	nums := []int{1, 1, 1}
+// 	k := 2
+// 	fmt.Println(subArraySum(nums, k))
+// }
+
+// func subArraySum(nums []int, k int) int {
+// 	result := 0
+// 	curr := 0
+// 	hashMap := make(map[int]int)
+// 	hashMap[0] = 1
+// 	for i := 0; i < len(nums); i++ {
+// 		curr += nums[i]
+// 		if val, found := hashMap[curr-k]; found {
+// 			result += val
+// 		}
+// 		hashMap[curr]++
+// 	}
+// 	return result
+// }
+
 package main
 
 import "fmt"
