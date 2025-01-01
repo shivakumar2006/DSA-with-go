@@ -1,3 +1,5 @@
+// subarray sum equal to K
+
 // package main
 
 // import "fmt"
@@ -86,15 +88,15 @@ func main() {
 
 func subArraySum(nums []int, k int) int {
 	result := 0
-	curr := 0
+	current := 0
 	hashMap := make(map[int]int)
 	hashMap[0] = 1
 	for i := 0; i < len(nums); i++ {
-		curr += nums[i]
-		if val, found := hashMap[curr-k]; found {
-			result += val
+		current += nums[i]
+		if value, found := hashMap[current-k]; found {
+			result += value
 		}
-		hashMap[curr]++
+		hashMap[current]++
 	}
 	return result
 }
