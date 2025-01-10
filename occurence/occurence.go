@@ -101,11 +101,12 @@
 // 	}
 // 	for i := 0; i < len(charSet); i++ {
 // 		if charSet[i] != 0 {
-// 			x = charSet[i]
-// 		} else if charSet[i] != x {
-// 			return false
+// 			if x == 0 {
+// 				x = charSet[i]
+// 			} else if x != charSet[i] {
+// 				return false
+// 			}
 // 		}
-// 	}
 // 	return true
 // }
 
