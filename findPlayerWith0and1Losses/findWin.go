@@ -132,6 +132,64 @@
 // 	return [][]int{zeroLossess, oneLoss}
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"sort"
+// )
+
+// func main() {
+// 	nums := [][]int{
+// 		{1, 3},
+// 		{2, 3},
+// 		{3, 6},
+// 		{5, 6},
+// 		{5, 7},
+// 		{4, 5},
+// 		{4, 8},
+// 		{4, 9},
+// 		{10, 4},
+// 		{10, 9},
+// 	}
+// 	fmt.Println((findWinners(nums)))
+// }
+
+// func findWinners(nums [][]int) [][]int {
+// 	lossessCount := make(map[int]int)
+
+// 	for i := 0; i < len(nums); i++ {
+// 		winner, loser := nums[i][0], nums[i][1]
+// 		lossessCount[loser]++
+// 		if _, exist := lossessCount[winner]; !exist {
+// 			lossessCount[winner] = 0
+// 		}
+// 	}
+
+// 	zeroLosses := []int{}
+// 	oneLoss := []int{}
+
+// 	keys := make([]int, 0, len(lossessCount))
+// 	for k := range lossessCount {
+// 		keys = append(keys, k)
+// 	}
+
+// 	for i := 0; i < len(keys); i++ {
+// 		player := keys[i]
+// 		losses := lossessCount[player]
+// 		if losses == 0 {
+// 			zeroLosses = append(zeroLosses, player)
+// 		} else if losses == 1 {
+// 			oneLoss = append(oneLoss, player)
+// 		}
+// 	}
+
+// 	sort.Ints(zeroLosses)
+// 	sort.Ints(oneLoss)
+
+// 	return [][]int{zeroLosses, oneLoss}
+// }
+
 package main
 
 import (
@@ -152,7 +210,7 @@ func main() {
 		{10, 4},
 		{10, 9},
 	}
-	fmt.Println((findWinners(nums)))
+	fmt.Println(findWinners(nums))
 }
 
 func findWinners(nums [][]int) [][]int {
@@ -166,7 +224,7 @@ func findWinners(nums [][]int) [][]int {
 		}
 	}
 
-	zeroLosses := []int{}
+	zeroLossess := []int{}
 	oneLoss := []int{}
 
 	keys := make([]int, 0, len(lossessCount))
@@ -174,18 +232,18 @@ func findWinners(nums [][]int) [][]int {
 		keys = append(keys, k)
 	}
 
-	for i := 0; i < len(keys); i++ {
+	for i := 0; i < len(lossessCount); i++ {
 		player := keys[i]
 		losses := lossessCount[player]
 		if losses == 0 {
-			zeroLosses = append(zeroLosses, player)
+			zeroLossess = append(zeroLossess, player)
 		} else if losses == 1 {
 			oneLoss = append(oneLoss, player)
 		}
 	}
 
-	sort.Ints(zeroLosses)
+	sort.Ints(zeroLossess)
 	sort.Ints(oneLoss)
 
-	return [][]int{zeroLosses, oneLoss}
+	return [][]int{zeroLossess, oneLoss}
 }
