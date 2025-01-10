@@ -109,5 +109,14 @@ func main() {
 func twoSum(nums []int, target int) []int {
 	l := 0
 	r := len(nums) - 1
-
+	for l < r {
+		if nums[l]+nums[r] < target {
+			l++
+		} else if nums[l]+nums[r] > target {
+			r--
+		} else {
+			return []int{l, r}
+		}
+	}
+	return nil
 }
