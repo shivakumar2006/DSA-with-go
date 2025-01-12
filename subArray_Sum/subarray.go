@@ -176,6 +176,31 @@
 // 	return result
 // }
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	nums := []int{1, 2, 3}
+// 	k := 3
+// 	fmt.Println(subArraySum(nums, k))
+// }
+
+// func subArraySum(nums []int, k int) int {
+// 	result := 0
+// 	current := 0
+// 	hashMap := make(map[int]int)
+// 	hashMap[0] = 1
+// 	for i := 0; i < len(nums); i++ {
+// 		current += nums[i]
+// 		if value, found := hashMap[current-k]; found {
+// 			result += value
+// 		}
+// 		hashMap[current]++
+// 	}
+// 	return result
+// }
+
 package main
 
 import "fmt"
