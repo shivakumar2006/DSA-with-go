@@ -68,4 +68,24 @@
 // 	return maxLength
 // }
 
+package main
 
+import "fmt"
+
+func main() {
+	s := "abcabcbb"
+	fmt.Println(longestSubString(s))
+}
+
+func longestSubString(s string) int {
+	hashMap := make(map[byte]int)
+
+	maxlenght := 0
+	start := 0
+
+	for i := 0; i < len(s); i++ {
+		if index, found := hashMap[s[i]]; found && index >= start {
+			start = index + 1
+		}
+	}
+}
