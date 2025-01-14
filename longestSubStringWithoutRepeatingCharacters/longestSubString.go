@@ -87,5 +87,10 @@ func longestSubString(s string) int {
 		if index, found := hashMap[s[i]]; found && index >= start {
 			start = index + 1
 		}
+
+		hashMap[s[i]] = i
+
+		maxlenght = max(maxlenght, i-start+1)
 	}
+	return maxlenght
 }
